@@ -13,7 +13,6 @@ use Stripe\PaymentIntent;
 class StripepaymentController extends Controller
 {
     public function paymentSubmit(Request $request){
-        // Stripe::setApiKey('sk_test_51ONDRUGTVd78f49fDcJEvoXyAoF1TCSEzhpRnt6J8sD58aKWRgYOCz0uW2zDieBzjgWXtEZ3lLJKHtdMWAatWKIP00aMMSvxx7');
         Stripe::setApiKey(config('services.stripe.secret'));
         
         $payment = new Payment();
